@@ -16,14 +16,7 @@ public class CollectorExample {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(CollectorExample.class.getResourceAsStream("people.txt")));
                 Stream<String> stream = reader.lines();
         ){
-            stream.map(
-                    line -> {
-                        String[] s = line.split(" ");
-                        Person p = new Person(s[0].trim(), Integer.parseInt(s[1]));
-                        person.add(p);
-                        return p;
-                    })
-                    .forEach(System.out::println)   ;
+            ComparatorExample.readPersonFile(person, stream);
         }
 
 

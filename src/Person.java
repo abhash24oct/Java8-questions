@@ -7,6 +7,14 @@ public class Person {
 
     private  LocalDate dateOfBirth;
 
+    private String sex;
+
+    public Person(String name, int age, String sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+    }
+
     public Person(){}
 
     public Person(String name, int age) {
@@ -31,12 +39,17 @@ public class Person {
         return this.age;
     }
 
+    public String getSex() {
+        return sex;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", dateOfBirth=" + dateOfBirth +
+                ", sex=" + sex +
                 '}';
     }
 }
